@@ -4,6 +4,8 @@
 char lookahead;  
 int state=0;
 char prehead;
+void secede();
+void invalid();
 
 
 char nexttoken() {
@@ -14,16 +16,6 @@ char nexttoken() {
   return(c);
   }
 }
-/*
-void recursion(char lookahead, int state)
-{
-  if(isdigit(lookahead)||isalpha(lookahead)>0) 
-           {
-            break;
-           }
-  
-}
-*/
 
 void secede()
 {
@@ -96,6 +88,7 @@ int main()
            else if(isdigit(lookahead)>0)
            {
              invalid();
+             break;
            }
            else
            {
